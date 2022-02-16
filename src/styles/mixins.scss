@@ -23,3 +23,35 @@
 		@content;
 	}
 }
+
+/** Card Mixins */
+@mixin card-title {
+	font-family: $font-main;
+	font-size: $font-size-l;
+	font-weight: $font-weight-bold;
+	color: $color-grey-1;
+	line-height: 32px;
+}
+
+@mixin card-text {
+	font-family: $font-main;
+	font-size: $font-size-m;
+	font-weight: $font-weight-semiBold;
+	line-height: 24px;
+	color: $color-grey-2;
+}
+
+@mixin card-button {
+	width: 168px;
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: $color-grey-1;
+	color: $color-white;
+	font-family: $font-main;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-m;
+	border-radius: 5px;
+	padding: 12px 22px;
+}

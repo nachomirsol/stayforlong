@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 /* FONTS */
 $font-main: 'Roboto', sans-serif;
@@ -6,8 +6,8 @@ $font-main: 'Roboto', sans-serif;
 /* FONT WEIGHT */
 $font-weight-light: 300;
 $font-weight-regular: 400;
-$font-weight-semiBold: 600;
-$font-weight-bold: 800;
+$font-weight-semiBold: 500;
+$font-weight-bold: 700;
 
 /* FONT VERTICAL SEPARATION */
 $line-height-regular: 1.5;
@@ -34,6 +34,9 @@ $spacing-l: 28px;
 $spacing-xl: 32px;
 $spacing-xxl: 36px;
 $spacing-xxxl: 40px;
+
+/** BORDERS **/
+$card-border: 2px solid #e0e0e0;
 
 /** COLORS */
 $color-marvel: #eb2328;

@@ -1,5 +1,9 @@
-/** Routes */
+import { Card } from 'components/card';
 
 export const App = () => {
-	return <div>Hello</div>;
+	return (
+		<div>
+			<Card />
+		</div>
+	);
 };
