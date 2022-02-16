@@ -12,7 +12,7 @@ export const Card = () => {
 					<h5>Storm</h5>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-						malesuada viverra m...
+						malesuada viverra masas
 					</p>
 				</div>
 				<button>
