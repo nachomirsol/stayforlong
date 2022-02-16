@@ -1,0 +1,8 @@
+@import 'styles/index.scss';
+
+.characterList {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 30px;
+}
