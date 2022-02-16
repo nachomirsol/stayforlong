@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 
 /* FONTS */
-$font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-$font-montserrat: 'Montserrat', sans-serif;
+$font-main: 'Roboto', sans-serif;
 
 /* FONT WEIGHT */
 $font-weight-light: 300;
@@ -38,12 +36,9 @@ $spacing-xxl: 36px;
 $spacing-xxxl: 40px;
 
 /** COLORS */
-$color-white: #fff;
-$color-black: #000;
-$color-background-white: #fff;
-$color-text-main: #333;
-$color-text-title: #444;
-$color-text-gray: #555;
-$color-text-gray-light: #777;
-$color-border-gray: #ddd;
-$color-background-lightGray: rgb(250, 250, 250);
+$color-marvel: #eb2328;
+$color-black: #000000;
+$color-grey-1: #444444;
+$color-grey-2: #666666;
+$color-grey-5: #f2f2f2;
+$color-white: #ffffff;
