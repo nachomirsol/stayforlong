@@ -5,7 +5,12 @@ import { SearchTypes } from './types';
 /** Styles */
 import './styles/search.scss';
 
-export const Search = ({ width = '100%', onChange, onClick }: SearchTypes) => {
+export const Search = ({
+	width = '100%',
+	query = '',
+	onChange,
+	onClick,
+}: SearchTypes) => {
 	return (
 		<div className='search' style={{ width }}>
 			<input
@@ -14,8 +19,9 @@ export const Search = ({ width = '100%', onChange, onClick }: SearchTypes) => {
 				placeholder='Search'
 				type='search'
 				onChange={onChange}
+				value={query}
 			/>
-			<button onClick={onClick}>
+			<button onClick={() => onClick(query)}>
 				<SearchIcon />
 			</button>
 		</div>

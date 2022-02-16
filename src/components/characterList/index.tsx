@@ -1,12 +1,15 @@
 /** Components */
 import { Card } from 'components/card';
-/** Hooks */
-import { useCharacters } from 'hooks/useCharacters';
+/** Types */
+import { CharacterListTypes } from './types';
 /** Styles */
 import './styles/characterList.scss';
 
-export const CharacterList = () => {
-	const { loading, error, characters } = useCharacters();
+export const CharacterList = ({
+	loading,
+	error,
+	characters,
+}: CharacterListTypes) => {
 	if (loading) {
 		return <span>loading...</span>;
 	}

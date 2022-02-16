@@ -1,5 +1,6 @@
 export type SearchTypes = {
 	width: string;
-	onChange: () => void;
-	onClick: () => void;
+	query: string;
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	onClick: (query: string) => void;
 };
