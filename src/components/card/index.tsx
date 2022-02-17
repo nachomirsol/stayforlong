@@ -15,7 +15,11 @@ export const Card = ({
 	const { path, extension } = thumbnail;
 
 	return (
-		<div className={`card ${loading ? 'cardLoading' : ''}`}>
+		<div
+			className='card'
+			style={loading ? { opacity: '0.3', zIndex: '1' } : {}}
+			role='card'
+		>
 			<div className='card__image'>
 				<img src={`${path}.${extension}`} />
 			</div>
@@ -24,7 +28,10 @@ export const Card = ({
 					<h5>{name}</h5>
 					<p>{description || 'No description provided'}</p>
 				</div>
-				<button onClick={() => window.open(url.url, '_blank')}>
+				<button
+					onClick={() => window.open(url.url, '_blank')}
+					role='cardButton'
+				>
 					Read more <ArrowIcon />
 				</button>
 			</div>

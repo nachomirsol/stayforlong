@@ -21,7 +21,8 @@ type InfoType = {
 
 type InfoItem = {
 	name: string;
-	resourceUri: string;
+	resourceURI: string;
+	type?: string;
 };
 
 export type Thumbnail = {

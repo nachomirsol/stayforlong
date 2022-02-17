@@ -15,7 +15,7 @@ export const Search = ({
 	onKeyPress,
 }: SearchTypes) => {
 	return (
-		<div className='search'>
+		<div className='search' role='search'>
 			<input
 				aria-label='Search'
 				name={name}
@@ -27,7 +27,7 @@ export const Search = ({
 					onKeyPress(e, query)
 				}
 			/>
-			<button onClick={() => onClick(query)}>
+			<button onClick={() => onClick(query)} role={'searchButton'}>
 				<SearchIcon />
 			</button>
 		</div>
