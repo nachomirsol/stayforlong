@@ -27,4 +27,4 @@ REACT_APP_MARVEL_API_SECRET_KEY=527cd37f7019b5e6a00907dcf4c7f36d7412e889</code><
 After setup steps:
 
 - Unit and integration tests: <pre><code>npm run test</code></pre>
-- End to End tests tests: <pre><code>npm run test:e2e"</code></pre> Important executing this tests with the app running.
+- End to End tests tests: <pre><code>npm run test:e2e</code></pre> Important executing this tests with the app running.
