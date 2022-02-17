@@ -30,7 +30,11 @@
 		padding: $spacing-ml;
 		&-text {
 			h5 {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
 				margin: 0px;
+				overflow: hidden;
 				@include card-title;
 			}
 			p {
@@ -42,6 +46,11 @@
 				overflow: hidden;
 				@include text;
 			}
+			.noDescription {
+				color: $color-grey-2;
+				font-weight: $font-weight-regular;
+				font-style: italic;
+			}
 		}
 
 		button {
@@ -49,6 +58,17 @@
 			@include card-button;
 			svg {
 				margin: 0 0 0 12px;
+			}
+		}
+
+		button:hover {
+			background-color: $color-white;
+			border: 2px solid $color-grey-1;
+			color: $color-grey-1;
+			svg {
+				path {
+					fill: $color-grey-1;
+				}
 			}
 		}
 	}

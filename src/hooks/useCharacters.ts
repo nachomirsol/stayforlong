@@ -23,7 +23,7 @@ export const useCharacters = () => {
 		setQuery(e.target.value);
 	};
 
-	const handleKeyPress = (e: any, querySearch: string) => {
+	const handleKeyPress = (e: React.KeyboardEvent<HTMLDivElement>, querySearch: string) => {
 		if (e.key === 'Enter' && querySearch !== '') {
 			dispatch(getCharacter(querySearch));
 		}
@@ -45,6 +45,6 @@ export const useCharacters = () => {
 		handleChange,
 		handleSearchClick,
 		handleKeyPress,
-		getCharacterList
+		getCharacterList,
 	};
 };

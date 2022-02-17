@@ -23,7 +23,7 @@ export const Search = ({
 				type={type}
 				onChange={onChange}
 				value={query}
-				onKeyPress={(e: React.SyntheticEvent<EventTarget>) =>
+				onKeyPress={(e: React.KeyboardEvent<HTMLDivElement>) =>
 					onKeyPress(e, query)
 				}
 			/>
