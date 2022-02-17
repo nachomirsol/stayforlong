@@ -40,7 +40,7 @@ describe('Search component', () => {
 
 		user.click(searchButton);
 
-		expect(props.onChange).toHaveBeenCalled();
+		expect(props.onClick).toHaveBeenCalled();
 	});
 
 	it('Should call onClick event on user press enter keyboard', () => {

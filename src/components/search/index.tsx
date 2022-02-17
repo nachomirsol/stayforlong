@@ -30,7 +30,7 @@ export const Search = ({
 			<button
 				className='button'
 				onClick={() => onClick(query)}
-				role={'searchButton'}
+				role='searchButton'
 			>
 				<SearchIcon />
 			</button>
