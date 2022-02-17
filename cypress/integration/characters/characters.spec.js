@@ -1,8 +1,8 @@
 describe('Characters app test', () => {
 	const TOTAL_CHARACTERS = 18;
 	it('Can open the app', () => {
-		cy.visit('http://localhost:8080/');
-		cy.wait(2000);
+		cy.visit('https://yellow-expert.surge.sh/');
+		cy.wait(4000);
 	});
 
 	it('can find a list of 18 characters', () => {
