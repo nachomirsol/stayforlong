@@ -45,5 +45,6 @@ export const useCharacters = () => {
 		handleChange,
 		handleSearchClick,
 		handleKeyPress,
+		getCharacterList
 	};
 };
