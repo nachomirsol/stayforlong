@@ -23,6 +23,12 @@ export const useCharacters = () => {
 		setQuery(e.target.value);
 	};
 
+	const handleKeyPress = (e: any, querySearch: string) => {
+		if (e.key === 'Enter' && querySearch !== '') {
+			dispatch(getCharacter(querySearch));
+		}
+	};
+
 	const handleSearchClick = (querySearch: string) => {
 		if (querySearch !== '') {
 			dispatch(getCharacter(querySearch));
@@ -38,5 +44,6 @@ export const useCharacters = () => {
 		query,
 		handleChange,
 		handleSearchClick,
+		handleKeyPress,
 	};
 };

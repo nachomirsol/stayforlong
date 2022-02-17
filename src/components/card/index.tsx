@@ -5,10 +5,17 @@ import { CardTypes } from './types';
 /** Styles */
 import './styles/card.scss';
 
-export const Card = ({ name, description, thumbnail }: CardTypes) => {
+export const Card = ({
+	name,
+	description,
+	thumbnail,
+	url,
+	loading,
+}: CardTypes) => {
 	const { path, extension } = thumbnail;
+
 	return (
-		<div className='card'>
+		<div className={`card ${loading ? 'cardLoading' : ''}`}>
 			<div className='card__image'>
 				<img src={`${path}.${extension}`} />
 			</div>
@@ -17,7 +24,7 @@ export const Card = ({ name, description, thumbnail }: CardTypes) => {
 					<h5>{name}</h5>
 					<p>{description || 'No description provided'}</p>
 				</div>
-				<button>
+				<button onClick={() => window.open(url.url, '_blank')}>
 					Read more <ArrowIcon />
 				</button>
 			</div>

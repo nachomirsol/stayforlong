@@ -20,7 +20,7 @@ const charactersReducer = (
 ): CharacterState => {
 	switch (action.type) {
 		case CHARACTER_LIST_REQUEST:
-			return { loading: true, error: false, characters: [] };
+			return { loading: true, error: false, characters: [...state.characters] };
 
 		case CHARACTER_LIST_SUCCESS:
 			return { loading: false, error: false, characters: action.payload };
@@ -29,7 +29,7 @@ const charactersReducer = (
 			return { loading: false, error: true, characters: [] };
 
 		case FILTER_CHARACTER_LIST_REQUEST:
-			return { loading: true, error: false, characters: [] };
+			return { loading: true, error: false, characters: [...state.characters] };
 
 		case FILTER_CHARACTER_LIST_SUCCESS:
 			return { loading: false, error: false, characters: action.payload };

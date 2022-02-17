@@ -7,15 +7,25 @@ import './app.scss';
 import { useCharacters } from './hooks/useCharacters';
 
 export const App = () => {
-	const { handleChange, handleSearchClick, loading, error, characters, query } =
-		useCharacters();
+	const {
+		loading,
+		error,
+		characters,
+		query,
+		handleChange,
+		handleSearchClick,
+		handleKeyPress,
+	} = useCharacters();
 	return (
 		<div className='app'>
+			<h3>Search your character</h3>
 			<Search
-				width={'50%'}
 				query={query}
 				onChange={handleChange}
 				onClick={(query: string) => handleSearchClick(query)}
+				onKeyPress={(e: React.SyntheticEvent<EventTarget>, query: string) =>
+					handleKeyPress(e, query)
+				}
 			/>
 			<CharacterList loading={loading} error={error} characters={characters} />
 		</div>

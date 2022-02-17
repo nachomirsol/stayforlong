@@ -1,4 +1,4 @@
-import { CharacterType, Thumbnail } from 'types';
+import { CharacterType, Thumbnail, Url } from 'types';
 
 export type CharacterListTypes = {
 	loading: boolean;
@@ -10,5 +10,6 @@ export type Character = {
 	id: number;
 	name: string;
 	description: string;
-	thumnail: Thumbnail;
+	thumbnail: Thumbnail;
+	urls: Url[];
 };
