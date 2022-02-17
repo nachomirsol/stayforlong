@@ -54,3 +54,5 @@ coverage/
 
 cypress/videos/
 cypress/screenshots/
+
+build/
