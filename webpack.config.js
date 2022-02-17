@@ -10,7 +10,6 @@ const ABSOLUTE_PATHS = {
 	store: path.resolve(__dirname, 'src/store/'),
 	api: path.resolve(__dirname, 'src/api/'),
 	hooks: path.resolve(__dirname, 'src/hooks/'),
-	utils: path.resolve(__dirname, 'src/utils/'),
 	models: path.resolve(__dirname, 'src/models/'),
 	constants: path.resolve(__dirname, 'src/constants/'),
 	styles: path.resolve(__dirname, 'src/styles/'),

@@ -26,7 +26,11 @@ export const Card = ({
 			<div className='card__content'>
 				<div className='card__content-text'>
 					<h5>{name}</h5>
-					<p>{description || 'No description provided'}</p>
+					{description ? (
+						<p>{description}</p>
+					) : (
+						<p className='noDescription'>(No description available)</p>
+					)}
 				</div>
 				<button
 					onClick={() => window.open(url.url, '_blank')}

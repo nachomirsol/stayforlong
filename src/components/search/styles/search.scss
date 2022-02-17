@@ -20,6 +20,7 @@
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		text-indent: $spacing-sm;
+		caret-color: $color-grey-1;
 		@include text-search;
 	}
 	::placeholder {
