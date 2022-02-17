@@ -1,33 +1,42 @@
 /** Components */
 import { Card } from 'components/card';
-/** Hooks */
-import { useCharacters } from 'hooks/useCharacters';
+import { Loader } from 'components/loader';
+/** Types */
+import { Character, CharacterListTypes } from './types';
 /** Styles */
 import './styles/characterList.scss';
 
-export const CharacterList = () => {
-	const { loading, error, characters } = useCharacters();
-	if (loading) {
-		return <span>loading...</span>;
-	}
+export const CharacterList = ({
+	loading,
+	error,
+	characters,
+}: CharacterListTypes) => {
 	if (error) {
 		return <span>Error...</span>;
 	}
-	if (characters.length === 0) {
-		return <span>No content...</span>;
-	}
+
 	return (
 		<div className='characterList'>
-			{characters.map(({ id, name, description, thumbnail }: any) => {
-				return (
-					<Card
-						key={id}
-						name={name}
-						description={description}
-						thumbnail={thumbnail}
-					/>
-				);
-			})}
+			{loading && (
+				<div className='characterList__loading'>
+					<Loader />
+				</div>
+			)}
+			{characters.length === 0 && !loading && <div>No results :(</div>}
+			{characters.map(
+				({ id, name, description, thumbnail, urls }: Character) => {
+					return (
+						<Card
+							key={id}
+							name={name}
+							description={description}
+							thumbnail={thumbnail}
+							url={urls[0]}
+							loading={loading}
+						/>
+					);
+				}
+			)}
 		</div>
 	);
 };

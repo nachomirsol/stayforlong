@@ -6,13 +6,21 @@ import {
 	FILTER_CHARACTER_LIST_SUCCESS,
 	FILTER_CHARACTER_LIST_FAILURE,
 } from '../actionTypes';
+import { CharacterActions, CharacterState } from '../types';
 
-const initialState = { loading: false, error: false, characters: [] };
+const initialState: CharacterState = {
+	loading: false,
+	error: false,
+	characters: [],
+};
 
-const charactersReducer = (state = initialState, action: any): any => {
+const charactersReducer = (
+	state: CharacterState = initialState,
+	action: CharacterActions
+): CharacterState => {
 	switch (action.type) {
 		case CHARACTER_LIST_REQUEST:
-			return { loading: true, error: false, characters: [] };
+			return { loading: true, error: false, characters: [...state.characters] };
 
 		case CHARACTER_LIST_SUCCESS:
 			return { loading: false, error: false, characters: action.payload };
@@ -21,7 +29,7 @@ const charactersReducer = (state = initialState, action: any): any => {
 			return { loading: false, error: true, characters: [] };
 
 		case FILTER_CHARACTER_LIST_REQUEST:
-			return { loading: true, error: false, characters: [] };
+			return { loading: true, error: false, characters: [...state.characters] };
 
 		case FILTER_CHARACTER_LIST_SUCCESS:
 			return { loading: false, error: false, characters: action.payload };

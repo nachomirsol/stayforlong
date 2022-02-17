@@ -5,17 +5,29 @@ import { SearchTypes } from './types';
 /** Styles */
 import './styles/search.scss';
 
-export const Search = ({ width = '100%', onChange, onClick }: SearchTypes) => {
+export const Search = ({
+	query = '',
+	type = 'search',
+	name = 'search',
+	placeholder = 'Name of character',
+	onChange,
+	onClick,
+	onKeyPress,
+}: SearchTypes) => {
 	return (
-		<div className='search' style={{ width }}>
+		<div className='search'>
 			<input
 				aria-label='Search'
-				name='query'
-				placeholder='Search'
-				type='search'
+				name={name}
+				placeholder={placeholder}
+				type={type}
 				onChange={onChange}
+				value={query}
+				onKeyPress={(e: React.SyntheticEvent<EventTarget>) =>
+					onKeyPress(e, query)
+				}
 			/>
-			<button onClick={onClick}>
+			<button onClick={() => onClick(query)}>
 				<SearchIcon />
 			</button>
 		</div>

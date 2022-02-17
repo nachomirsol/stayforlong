@@ -5,4 +5,21 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 30px;
+	margin: 66px 0 0 0;
+	@include ms {
+		justify-content: center;
+	}
+
+	&__loading {
+		position: absolute;
+		left: 47%;
+		margin: 36px 0 0 0;
+		background-color: $color-white;
+		width: 100px;
+		height: 100px;
+		z-index: 10;
+		@include xs {
+			left: 38%;
+		}
+	}
 }

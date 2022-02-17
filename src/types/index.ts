@@ -29,7 +29,7 @@ export type Thumbnail = {
 	path: string;
 };
 
-type Url = {
+export type Url = {
 	type: string;
 	url: string;
 };

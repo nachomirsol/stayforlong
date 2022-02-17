@@ -8,6 +8,10 @@
 	border: $generic-border;
 	border-radius: 5px;
 	background-color: $color-white;
+	&.cardLoading {
+		opacity: 0.3;
+		z-index: 1;
+	}
 	&__image {
 		width: 100%;
 		height: 50%;
@@ -15,6 +19,7 @@
 		img {
 			width: 100%;
 			height: 100%;
+			border-radius: 5px 5px 0 0;
 		}
 	}
 	&__content {
@@ -35,7 +40,7 @@
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
-				@include card-text;
+				@include text;
 			}
 		}
 
