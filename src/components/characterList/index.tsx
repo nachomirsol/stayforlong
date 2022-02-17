@@ -22,7 +22,9 @@ export const CharacterList = ({
 					<Loader />
 				</div>
 			)}
-			{characters.length === 0 && !loading && <div>No results :(</div>}
+			{characters.length === 0 && !loading && (
+				<div className='noData'>No results :(</div>
+			)}
 			{characters.map(
 				({ id, name, description, thumbnail, urls }: Character) => {
 					return (

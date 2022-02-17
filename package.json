@@ -4,9 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack serve",
+		"build": "webpack --mode=production",
 		"dev": "webpack serve --mode=development",
-		"test": "react-scripts test"
+		"test": "react-scripts test",
+		"test:e2e": "cypress run --spec \"cypress/integration/**/*\"",
+		"cy:open": "cypress open"
 	},
 	"author": "",
 	"license": "ISC",
@@ -24,10 +26,12 @@
 		"@types/react-dom": "^17.0.11",
 		"axios-mock-adapter": "^1.20.0",
 		"babel-loader": "^8.2.3",
+		"clean-webpack-plugin": "^4.0.0",
 		"css-loader": "^6.6.0",
 		"dotenv-webpack": "^7.1.0",
 		"html-webpack-plugin": "^5.5.0",
 		"jest-watch-typeahead": "^0.6.5",
+		"mini-css-extract-plugin": "^2.5.3",
 		"redux-mock-store": "^1.5.4",
 		"sass": "^1.49.7",
 		"sass-loader": "^12.6.0",
@@ -38,10 +42,13 @@
 		"webpack-dev-server": "^4.7.4"
 	},
 	"dependencies": {
+		"@cypress/react": "^5.12.3",
+		"@cypress/webpack-dev-server": "^1.8.1",
 		"@types/react-redux": "^7.1.22",
 		"@types/redux": "^3.6.0",
 		"@types/redux-thunk": "^2.1.0",
 		"axios": "^0.26.0",
+		"cypress": "^9.5.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-redux": "^7.2.6",

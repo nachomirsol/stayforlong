@@ -27,7 +27,11 @@ export const Search = ({
 					onKeyPress(e, query)
 				}
 			/>
-			<button onClick={() => onClick(query)} role={'searchButton'}>
+			<button
+				className='button'
+				onClick={() => onClick(query)}
+				role={'searchButton'}
+			>
 				<SearchIcon />
 			</button>
 		</div>
