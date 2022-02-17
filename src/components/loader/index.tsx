@@ -3,7 +3,7 @@ import './styles/loader.scss';
 
 export const Loader = () => {
 	return (
-		<div className='loader'>
+		<div className='loader' role='loader'>
 			<svg
 				width='100'
 				height='100'
