@@ -1,22 +1,22 @@
 /** Components */
 import { Card } from 'components/card';
 import { Loader } from 'components/loader';
+/** Hooks */
+import { useCharacters } from 'hooks/useCharacters';
 /** Types */
 import { Character, CharacterListTypes } from './types';
 /** Styles */
 import './styles/characterList.scss';
 
-export const CharacterList = ({
-	loading,
-	error,
-	characters,
-}: CharacterListTypes) => {
+export const CharacterList = () => {
+	const { loading, error, characters }: CharacterListTypes = useCharacters();
+
 	if (error) {
 		return <span>Error...</span>;
 	}
 
 	return (
-		<div className='characterList'>
+		<div className='characterList' role='characterList'>
 			{loading && (
 				<div className='characterList__loading'>
 					<Loader />

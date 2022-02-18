@@ -1,19 +1,20 @@
 /** Assets */
 import { SearchIcon } from 'assets/icons/search';
+/** Hooks */
+import { useSearch } from 'hooks/useSearch';
 /** Types */
 import { SearchTypes } from './types';
 /** Styles */
 import './styles/search.scss';
 
 export const Search = ({
-	query = '',
 	type = 'search',
 	name = 'search',
 	placeholder = 'Name of character',
-	onChange,
-	onClick,
-	onKeyPress,
 }: SearchTypes) => {
+	const { query, handleChange, handleSearchClick, handleKeyPress } =
+		useSearch();
+
 	return (
 		<div className='search' role='search'>
 			<input
@@ -21,15 +22,15 @@ export const Search = ({
 				name={name}
 				placeholder={placeholder}
 				type={type}
-				onChange={onChange}
+				onChange={(e) => handleChange(e)}
 				value={query}
 				onKeyPress={(e: React.KeyboardEvent<HTMLDivElement>) =>
-					onKeyPress(e, query)
+					handleKeyPress(e, query)
 				}
 			/>
 			<button
 				className='button'
-				onClick={() => onClick(query)}
+				onClick={() => handleSearchClick(query)}
 				role='searchButton'
 			>
 				<SearchIcon />
