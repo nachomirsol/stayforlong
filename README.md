@@ -1,4 +1,4 @@
-# STAYFORLONG FRONTEND TEST
+# MARVEL APP
 
 Application developed with React, Redux and TypeScript.
 
